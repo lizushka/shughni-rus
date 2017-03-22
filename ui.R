@@ -11,7 +11,7 @@ navbarPage(theme = shinytheme("readable"),
     p("Специальные символы: á ā ā́ | é ē ḗ ẹ ẹ́ ȇ ȇ́ | í ī ī́ | ó ō ṓ | ú ū ū́ ů ů́ | ɣ ɣ̌ x̌ š č ž ʒ ǰ ð θ"),
     sidebarLayout(
       sidebarPanel(
-        checkboxGroupInput('show_vars', 'Please, select information to show:',
+        checkboxGroupInput('show_vars', 'Please, select columns to show:',
                           names(dic), selected = names(dic)), width = 2
       ),
       mainPanel(
