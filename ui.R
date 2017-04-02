@@ -2,12 +2,13 @@ library(shiny)
 library(shinythemes)
 library(DT)
 
-dic <- read.csv("85-173.csv",sep="\t",header=TRUE)
+dic <- read.csv("85-173_225-243.csv",sep="\t",header=TRUE)
 
 navbarPage(theme = shinytheme("readable"),
   "Shughni Project",
   tabPanel("Dictionary",
     titlePanel("Шугнанско-русский словарь"),
+    p("Поиск осуществляется по всем полям словаря"),
     p("Вы можете воспользоваться точным поиском, поиском с упрощенной орфографией (все гласные лишены диакритических символов, вместо ǰ используется j, вместо x̌ - x, а также использовать регулярные выражения"),
     p("Специальные символы: á ā ā́ | é ē ḗ ẹ ẹ́ ȇ ȇ́ | í ī ī́ | ó ō ṓ | ú ū ū́ ů ů́ | ɣ ɣ̌ x̌ š č ž ʒ ǰ ð θ"),
     sidebarLayout(
