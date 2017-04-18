@@ -2,7 +2,7 @@ library(shiny)
 library(shinythemes)
 library(DT)
 
-dic <- read.csv("85-173_225-243.csv",sep="\t",header=TRUE)
+dic <- read.csv("85-192_225-243.csv",sep="\t",header=TRUE)
 
 navbarPage(theme = shinytheme("readable"),
   "Shughni Project",

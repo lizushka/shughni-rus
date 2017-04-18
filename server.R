@@ -3,7 +3,7 @@ library(DT)
 
 function(input, output) {
   output$filtred_dic <- DT::renderDataTable({
-    DT::datatable(read.csv("85-173_225-243.csv",sep="\t",header=TRUE)[, input$show_vars, drop = FALSE],
+    DT::datatable(read.csv("85-192_225-243.csv",sep="\t",header=TRUE)[, input$show_vars, drop = FALSE],
                   options = list(
                     autoWidth = TRUE,
                     columnDefs = list(list(width = '600px', targets = c(-1,-2)),list(visible=FALSE, targets=c(2))),
@@ -13,7 +13,7 @@ function(input, output) {
                     searchHighlight = TRUE))
   })
   output$morph <- DT::renderDataTable({
-    DT::datatable(read.csv("morph_2203.csv",sep="\t",header=TRUE))},
+    DT::datatable(read.csv("morphology_1804.csv",sep=",",header=TRUE))},
     options = list(
       autoWidth = TRUE,
       columnDefs = list(list(width = '30%', targets = "5"))))
